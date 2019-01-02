@@ -1,0 +1,39 @@
+.content-card {
+  width: 40%;
+  height: 12vh;
+  border: 1px solid #eee;
+  padding-top: 10px;
+  border-radius: 10px;
+  margin-left: 4%;
+  display: inline-block;
+  /* background-color: rgb(16, 142, 233, 0.2); */
+}
+.card-title {
+  width: 35px;
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 3px;
+  /* background-color: #108ee9; */
+  color: #fff;
+  position: relative;
+  top: 3px;
+  left: 70%;
+}
+.card-content {
+    width: 90%;
+    height: 20px;
+  font-size: 12px;
+  text-align: left;
+  line-height: 20px;
+  border-radius: 3px;
+  color: #fff;
+  position: relative;
+  top: 30px;
+  padding: 0 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  
+}

@@ -1,0 +1,92 @@
+.bottom-bar {
+  position: absolute;
+  top: 93vh;
+  width: 100%;
+  /* height: 10vh; */
+}
+.mine {
+  width: 80%;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  /* justifyContent: center; */
+  align-items: center;
+  align-content: center;
+  margin-left: 10%;
+  margin-top: 4%;
+  /* position: relative; */
+  /* top:10%; */
+  background-color: #fff;
+  display: flex;
+}
+
+.icon-fly {
+  padding-left: 10px;
+  font-size: 22px;
+  animation: spin 5s linear 0s infinite;
+  /* color: rgb(236, 153, 29); */
+}
+.top-title {
+  /* background-color: #fff; */
+  width: 70%;
+  display: flex;
+  margin-left: 15%;
+  height: 30%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3%;
+  /* align-content: center; */
+  /* align-self: center; */
+  color: #fff;
+  /* height:1; */
+}
+.top-title-text {
+  line-height: 100%;
+  /* text-align: center */
+}
+.login {
+  width: 100%;
+  padding-left: 5%;
+  color: #aaa;
+}
+.mine-content {
+  width: 100%;
+  display: flex;
+  padding-left: 5%;
+  align-items: center;
+  justify-content: center;
+}
+.icon-elf {
+  font-size: 22px;
+  color: #108ee9;
+}
+.btns {
+  width: 100%;
+  height: 30%;
+  display: flex;
+}
+.btn-local {
+  margin: 8%;
+  width: 35%;
+  height: 10vh;
+  background-color: #108ee9;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+.btn-local-icon {
+  font-size: 25px;
+  padding: 20px;
+}
+.mine-userphoto {
+  background-repeat: no-repeat;
+  flex: none;
+  background-size: 100% 100%;
+  /* -moz-background-size: 100% 100%; */
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+}

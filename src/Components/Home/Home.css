@@ -1,0 +1,369 @@
+@import "http://at.alicdn.com/t/font_800931_b9llkix8w9p.css";
+
+@-webkit-keyframes spin {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes floatdown {
+  
+  0%   { left:0px; top:0px;width: 80%;}
+  25%  { left:0px; top:0px;width: 60%;}
+  50%  { left:0px; top:0px;width: 40%;}
+  75%  { left:0px; top:0px;width: 8vh;height:8vh;border-radius: 8vh}
+  100% { left:0px; top:60vh;width: 8vh;height:8vh;border-radius: 8vh}
+}
+@keyframes floatdown
+{
+0%   { left:0px; top:0px;width: 80%;}
+25%  { left:0px; top:0px;width: 60%;}
+50%  { left:0px; top:0px;width: 40%;}
+75%  { left:0px; top:0px;width: 8vh;height:8vh;border-radius: 8vh}
+100% { left:0px; top:60vh;width: 8vh;height:8vh;border-radius: 8vh}
+}
+@-webkit-keyframes floatup {
+  
+  0%    { left:0px; top:60vh;width: 10vh;}
+  25% { left:0px; top:0px;width: 10vh;}
+  50%  { left:0px; top:0px;width: 40%;}
+  75% { left:0px; top:0px;width: 60%;}
+  100%{ left:0px; top:0px;width: 80%;}
+}
+@keyframes floatup
+{
+  
+  0%    { left:0px; top:60vh;width: 10vh;}
+  25% { left:0px; top:0px;width: 10vh;}
+  50%  { left:0px; top:0px;width: 40%;}
+  75% { left:0px; top:0px;width: 60%;}
+  100%{ left:0px; top:0px;width: 80%;}
+}
+@keyframes changeBg
+{
+  
+  0%    { background-Color:"#ccc";width: 0%;border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
+  25% {background-Color:"#ccc";width: 20%;border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
+  50%  {background-Color:"#ccc"; width: 40%;border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
+  75% { background-Color:"#ccc";width: 60%;border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
+  100%{ background-Color:"#ccc";width: 80%;border-top-right-radius: 20px; border-bottom-right-radius: 20px;}
+}
+
+#tab-bar.demo {
+    display: flex;
+    flex-direction: column;
+  }
+  #tab-bar .demoName {
+    height: 40px;
+  }
+  #tab-bar .demo-preview-item .am-tab-bar {
+    background-color: white;
+  }
+  .mhome{
+    font-size: 22px;
+  }
+  .mmine{
+    font-size: 22px;
+  }
+  .card-header{
+    font-size: 13px;
+    color:#108ee9;
+    height:40px;
+    border-bottom: none!important
+
+  }
+  .card-header::before{
+    font-size: 13px;
+    color:#108ee9;
+    /* height:50px; */
+    border-bottom: none!important
+
+  }
+  .card-main{
+    border-color: #108ee9;
+    border-radius: 15px!important;
+    /* height:100px!important */
+    /* background-color: #108ee9 */
+  }
+  .card-main::before{
+    border-color: #108ee9;
+    border-radius: 15px!important;
+    /* height:100px!important */
+    /* border:0px!important; */
+  }
+  .searchbar{
+    background-color: #108ee9;
+    color: #fff;
+    width:78%;
+    margin-left: 8%;
+    padding-top: 10px
+  }
+  .floatview{
+    width: 80%;
+    height:10vh;
+    border:1px solid #eee!important;
+    border-radius: 20px;
+    justify-content: center;
+    /* justifyContent: center; */
+    align-items: center;
+    align-content: center;
+    margin-left: 10%;
+    margin-top: 4%;
+    /* position: relative; */
+    /* top:10%; */
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    
+    /* animation: myfirst 1s linear 2s infinite; */
+    /* animation: myfirst 2s linear 1s 1 forwards;
+    z-index: 1; */
+    z-index: 1
+  }
+  .floatview-bg{
+    width: 0%;
+    height:10vh;
+    /* border:1px solid #fff; */
+    /* border-radius: 30px; */
+    /* border:1px solid #eee; */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    align-content: center;
+    margin-left: 10%;
+    /* margin-top: 3%; */
+    position: absolute;
+    top:10vh;
+    /* top:10%; */
+    background-color: rgb(16, 142, 233,0.1);
+    display: flex;
+    /* animation: changeBg 20s linear 0s 1; */
+    /* animation: myfirst 2s linear 1s 1 forwards;
+    z-index: 1; */
+    z-index: 1
+  }
+  .floatview1{
+    width: 80%;
+    height:10vh;
+    border:1px solid #eee;
+    border-radius: 20px;
+    /* justifyContent: center; */
+    align-items: center;
+    align-content: center;
+    margin-left: 10%;
+    margin-top: 4%;
+    /* position: relative; */
+    /* top:10%; */
+    background-color: #fff;
+    display: flex;
+    animation: floatdown 1s linear 0s 1 forwards;
+    z-index: 1;
+    position: relative;
+    z-index: 1
+  }
+  .floatview2{
+    width: 80%;
+    height:10vh;
+    border:1px solid #fff;
+    border-radius: 20px;
+    /* justifyContent: center; */
+    align-items: center;
+    align-content: center;
+    margin-left: 10%;
+    margin-top: 4%;
+    /* position: relative; */
+    /* top:10%; */
+    background-color: #fff;
+    display: flex;
+    animation: floatup 1s linear 0s 1 forwards;
+    /* animation: changeBack 1s linear 0s infinite; */
+    
+    z-index: 1;
+    position: relative;
+  }
+  .content{
+    height: 78vh;
+    overflow: scroll
+  }
+  .icon-up{
+    color:#108ee9;
+    /* display: block; */
+    font-size: 30px;
+    margin-left: 0%;
+    padding: 5px;
+  }
+  .icon-play{
+    color:#108ee9;
+    /* display: block; */
+    font-size: 40px;
+    padding: 5px;
+    animation-play-state: paused;
+    /* box-shadow: 0 0 2px 2px #108ee9 0.8; */
+  }
+  .icon-pause{
+    color:#108ee9;
+    font-size: 40px;
+    padding: 5px;
+  }
+  .icon-down{
+    color:#108ee9;
+    /* display: block; */
+    font-size: 30px;
+    padding: 5px;
+  }
+  .img{
+    background: url("../../lib/images/timg.jpg") ;
+    background-repeat: no-repeat;
+    /* width:auto;
+    height:auto; */
+    width:10vh;
+    height:10vh;
+    display: block;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    animation: spin 3s linear 0s infinite;
+    animation-play-state: paused;
+    /* animation: spin 2s linear 0s infinite; */
+  }
+  .img-rotate{
+    background-image: url("../../lib/images/first.jpg") ;
+    background-repeat: no-repeat;
+    width:10vh;
+    height:10vh;
+    display: block;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 5px;
+    animation-play-state: running;
+    /* ani */
+    animation: spin 3s linear 0s infinite;
+  }
+  .floatview-singer{
+    width: 100px;
+    color:#ccc;
+    padding: 5px;
+    font-size: 10px;
+  }
+  .floatview-song{
+    width: 100px;
+    padding: 5px;
+    font-size: 14px;
+    color:#108ee9;
+  }
+  .floatview-songs{
+    width: 100px;
+    padding: 5px;
+    /* margin-left: 20%; */
+  }
+  .bottom-bar{
+    position: absolute;
+    top:93vh;
+    width: 100%;
+    /* height: 10vh; */
+    /* margin-top: 100px; */
+    /* border:1px solid #000;
+    background-color: #000 */
+  }
+  .content-cards{
+    position: relative;
+    height: 18vh;
+    width: 100%;
+    padding-top: 10px;
+    /* display: block; */
+    overflow-x: scroll; 
+    width: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+    /* overflow-x: scroll;
+    float: left; */
+  }
+  .content-card-title{
+    
+    width:40%;
+    height:4vh;
+    margin-left: 4%;
+    display: flex;
+    padding-top: 10px;
+  }
+  .content-card-title-line{
+    display: block;
+    width:3px;
+    height:3vh;
+    background-color: #108ee9;
+  }
+  .content-card-title-text{
+    padding-left: 5px;
+    font-size: 14px;
+  }
+  .icon-message{
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 20px 10px;
+  }
+  .soulbar{
+    width: 100%;
+    height:5vh;
+    font-size: 14px;
+    background-color: #108ee9;
+    line-height: 5vh;
+    color: #fff;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  /* .my-accordion .pad .am-accordion-content-box {
+    padding: 10px;
+  } */
+  .my-accordion{
+     border-radius: 10px;
+     margin: 10px 0;
+     color: #fff;
+  }
+  .pad{
+    
+    border-radius: 10px;
+    margin: 5px 0;
+    color: #fff;
+  }
+  .am-accordion-header{
+    background-color: #108ee9!important;
+    height:7vh!important;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .panel-title{
+    font-size: 12px;
+    color: #fff;
+  }
+  .am-accordion-header{
+    color: #fff!important;
+    line-height: 7vh!important;
+    font-size: 14px!important;
+  }
+  .am-accordion-content-box{
+    background-color: rgb(16, 142, 233,0.2);
+    text-indent: 20px;
+    height: 10vh;
+    /* color: #fff!important; */
+  }
+  .panel-content{
+    padding: 0 20px;
+  }

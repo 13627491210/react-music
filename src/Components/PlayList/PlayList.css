@@ -1,0 +1,147 @@
+
+.list-cover{
+    width: 100%;
+    height:30vh;
+    /* background: rgb(16, 142, 233); */
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    border:1px solid #ccc;
+    -webkit-box-shadow:0 1px 20px rgba(0,0,0);
+    box-shadow:0 3px 20px rgb(0, 0, 0,0.4);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  top:0;
+    /* display: block; */
+    /* position: fixed; */
+}
+.list-cover-head{
+    width: 100%;
+    height: 5vh;
+    position: fixed;
+    top:0;
+    /* background: rgb(16, 142, 233); */
+    z-index: 2;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    /* border-bottom: 1px solid;
+    border-color: #fff; */
+}
+.list-cover-title{
+    
+    font-size: 16px;
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    left: 45%;
+    top:0;
+}
+.list-container{
+    
+    width: 100%;
+    height: auto;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    background-color: rgb(16, 142, 233,0.1);
+}
+.icon-back{
+    font-size: 18px;
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.icon-operations{
+    
+    font-size: 18px;
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    right:0;
+    top:0;
+}
+.my-list .spe .am-list-extra {
+    flex-basis: initial;
+    /* position: sticky; */
+    display: block
+  }
+  .list-songs{
+      /* height: auto; */
+    /* overflow-y: scroll;
+    position: sticky; */
+    margin-top: 30vh;
+    padding-top: 10px;
+  }
+  .play-all{
+      font-size: 24px;
+      color: rgb(16, 142, 233);
+  }
+  .list-head{
+    display:flex;
+    align-items: center;
+    height: 5vh;
+  }
+  .am-list-header{
+      background-color: #fff;
+      margin-top: 30px;
+      
+  }
+  .play-line{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      border-bottom: 1px solid #eee;
+      
+  }
+  .play-rank{
+      width: 15%;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-weight: 700;
+
+  }
+  .play-photo{
+      width: 14%;
+      height: 45px;
+      border-radius: 5px;
+      background-size: 100% 100%;
+  }
+  .play-song{
+      width: 50vw;
+      height: 50px;
+      display: block;
+      line-height: 25px;
+  }
+  .play-op{
+      
+    width: 20%;
+    height: 50px;
+    text-align: right;
+    line-height: 50px;
+    padding: 0 10px;
+    color: rgb(0, 0, 0,0.5)
+  }
+  .play-song-name{
+      font-size: 14px;
+      width: 200px;
+      text-overflow:ellipsis;
+      padding: 0 10px;
+  }
+  .play-song-singer{
+      font-size: 12px;
+      height: 20px;
+      color: #aaa;
+      text-overflow:ellipsis;
+      padding: 0 10px;
+  }
