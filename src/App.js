@@ -10,10 +10,16 @@ import  { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 class App extends Component {
   state = {
     playUrl:"",
+    showPlay:false,
   }
   play = () => {
    const audio =  document.getElementById("audio")
    audio.play();
+  }
+  changeplay = () => {
+    this.setState({
+      showPlay:!this.state.showPlay
+    })
   }
   getplayurl = (url) => {
     console.log(url)
@@ -26,6 +32,7 @@ class App extends Component {
     super(props)
     this.state={
       playUrl:"",
+      showPlay:false,
     }
   }
   render() {
@@ -39,16 +46,18 @@ class App extends Component {
       // <frame src="../"></frame> */}
 // {/* <frame src="/log/music.html"></frame> */}
 // {/* </frameset> */}
+<div className="soulHome">
       <Router>
       <Switch>
         <Route path="/Home" component={Home} />
         <Route exact path="/" component={Login} />
         <Route path="/Mine" component={Mine} />
         <Route path="/PlayList" component={PlayList} />
-        <Route path="/Play" component={Play} />
         <Route path="/Login" component={Login} />
       </Switch>
     </Router>
+    <Play showPlay={this.state.showPlay} changeplay={this.changeplay} ></Play>
+    </div>
     // </React.Fragment>
     )
      

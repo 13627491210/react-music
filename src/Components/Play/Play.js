@@ -39,19 +39,22 @@ class Play extends Component {
   };
 
   componentDidMount = () => {
-    const music = this.props.location.state.music;
-    const musicid = this.props.location.state.music.id;
-    var getMusicUrl = "http://localhost:3000/song/url?id=" + musicid;
-
-    axios.get(getMusicUrl).then(response => {
-      console.log("歌曲地址", response.data.data[0].url);
-      this.setState({
-        musicurl: response.data.data[0].url,
-        musicname: music.name,
-        musicsinger: music.ar[0].name,
-        musicphoto: music.al.picUrl
+    if(this.props.location){
+      const music = this.props.location.state.music;
+      const musicid = this.props.location.state.music.id;
+      var getMusicUrl = "http://localhost:3000/song/url?id=" + musicid;
+  
+      axios.get(getMusicUrl).then(response => {
+        console.log("歌曲地址", response.data.data[0].url);
+        this.setState({
+          musicurl: response.data.data[0].url,
+          musicname: music.name,
+          musicsinger: music.ar[0].name,
+          musicphoto: music.al.picUrl
+        });
       });
-    });
+    }
+   
   };
   login = () => {};
   constructor(props) {
@@ -72,9 +75,10 @@ class Play extends Component {
     isPlaying: false
   };
   render() {
+    const {showPlay} = this.props;
     const { musicname, musicphoto, musicsinger, musicurl } = this.state;
     return (
-      <div className="play-container">
+      <div className={showPlay?"play-container":"play-hide"}>
       <div className="play-bg" style={{backgroundImage:`url("${musicphoto}")`}}> </div>
         <div className="list-cover-head">
           {/* <Link

@@ -22,7 +22,6 @@ class Login extends Component {
         
     }
     onHandleSubmit = async() => {
-        alert("哈哈哈")
         const loginUrl = "http://localhost:3000/login/cellphone?phone="+this.state.username+"&password="+this.state.userpass;
        await axios.get(loginUrl)
        .then((response) => {
@@ -100,7 +99,7 @@ class Login extends Component {
             {/* <div className="login-name"> */}
                <input className="login-name" placeholder="请输入账号" value={username} onChange={this.onhandleChangeName}></input>
                <input className="login-pass" placeholder="请输入密码" value={userpass} onChange={this.onhandleChangePass}></input>
-               <Button type="submit" className="login-submit" onClick={this.onHandleSubmit}>提交</Button>
+               <Button type="submit" className="login-submit" onClick={this.onHandleSubmit}>登陆</Button>
             {/* </div> */}
         </div>
         </div>

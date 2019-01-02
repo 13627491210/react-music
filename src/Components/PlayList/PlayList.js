@@ -108,13 +108,14 @@ class PlayList extends Component {
   onHandleMusic =(e,item) => {
     console.log("歌曲",)
     console.log("歌曲",item)
-    this.props.history.push({
-      pathname:"./Play",
-      state:{
-        // musicid:id,
-        music:item
-      }
-    })
+    this.props.changeplay();
+    // this.props.history.push({
+    //   pathname:"./Play",
+    //   state:{
+    //     // musicid:id,
+    //     music:item
+    //   }
+    // })
   }
   state = {
 

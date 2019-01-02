@@ -32,6 +32,9 @@
     /* background-color: rgb(16, 142, 233,0.5); */
     background-color: #fff
 }
+.play-hide{
+display: none;
+}
 .play-cover-head{
 /* 
     width: 100%;
