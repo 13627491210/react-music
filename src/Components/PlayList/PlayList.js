@@ -15,7 +15,7 @@ import "../PlayList/PlayList.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import ImageLoader from 'react-load-image';
-import { getItem } from "../../lib/api/localCache";
+import { getItem, setItem, removeItem } from "../../lib/api/localCache";
 import first from '../../lib/images/first.jpg'
 
 const Item = List.Item;
@@ -41,6 +41,8 @@ class PlayList extends Component {
         console.log("shuju",this.state.playlist)
   }
   componentDidMount = async() => {
+    console.log("props",this.props)
+    console.log("props2",this.props.changeplay)
    console.log("id",this.props.location.state.item.coverImgUrl)
    const userInfo = JSON.parse(getItem("userInfo"));
    const playlist = JSON.parse(getItem("playList"));
@@ -105,17 +107,24 @@ class PlayList extends Component {
   //     // }
   //   }
   login = () => {};
-  onHandleMusic =(e,item) => {
+  onHandleMusic =(item) => {
     console.log("歌曲",)
     console.log("歌曲",item)
-    this.props.changeplay();
-    // this.props.history.push({
-    //   pathname:"./Play",
-    //   state:{
-    //     // musicid:id,
-    //     music:item
-    //   }
-    // })
+    removeItem(JSON.stringify("music"))
+    setItem("music",JSON.stringify(item))
+    // this.props.changeplay();
+    
+    // document.getElementById("playing").className="play-container"
+
+     
+    this.props.history.push({
+      pathname:"./Play",
+      state:{
+        // musicid:id,
+        music:item,
+        isShow:true,
+      }
+    })
   }
   state = {
 
@@ -240,8 +249,9 @@ class PlayList extends Component {
                        pathname: "/Play"
                      }}
                    > */}
-                     <div className="play-song" key={i} onClick={(e) => {
-                       this.onHandleMusic(e,item)
+                     <div className="play-song" key={i} onClick={() => {
+                       
+                          this.onHandleMusic(item)
                      }}>
                        <div className="play-song-name">{item.name}</div>
                        <div className="play-song-singer">{item.ar[0].name}</div>

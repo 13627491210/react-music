@@ -83,6 +83,8 @@ class Mine extends Component {
   // }
   onHandleexit = () => {
     removeItem("userInfo")
+    removeItem("playList")
+    removeItem("music")
     this.props.history.push({
       pathname:"./login",
     });

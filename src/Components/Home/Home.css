@@ -27,28 +27,28 @@
 }
 @keyframes floatdown
 {
-0%   { left:0px; top:0px;width: 80%;}
-25%  { left:0px; top:0px;width: 60%;}
-50%  { left:0px; top:0px;width: 40%;}
-75%  { left:0px; top:0px;width: 8vh;height:8vh;border-radius: 8vh}
+0%   { left:0px; top:10vh;width: 80%;}
+25%  { left:0px; top:10vh;width: 60%;}
+50%  { left:0px; top:10vh;width: 40%;}
+75%  { left:0px; top:10vh;width: 8vh;height:8vh;border-radius: 8vh}
 100% { left:0px; top:60vh;width: 8vh;height:8vh;border-radius: 8vh}
 }
 @-webkit-keyframes floatup {
   
   0%    { left:0px; top:60vh;width: 10vh;}
-  25% { left:0px; top:0px;width: 10vh;}
-  50%  { left:0px; top:0px;width: 40%;}
-  75% { left:0px; top:0px;width: 60%;}
-  100%{ left:0px; top:0px;width: 80%;}
+  25% { left:0px; top:10vh;width: 10vh;}
+  50%  { left:0px; top:10vh;width: 40%;}
+  75% { left:0px; top:10vh;width: 60%;}
+  100%{ left:0px; top:10vh;width: 80%;}
 }
 @keyframes floatup
 {
   
   0%    { left:0px; top:60vh;width: 10vh;}
-  25% { left:0px; top:0px;width: 10vh;}
-  50%  { left:0px; top:0px;width: 40%;}
-  75% { left:0px; top:0px;width: 60%;}
-  100%{ left:0px; top:0px;width: 80%;}
+  25% { left:0px; top:10vh;width: 10vh;}
+  50%  { left:0px; top:10vh;width: 40%;}
+  75% { left:0px; top:10vh;width: 60%;}
+  100%{ left:0px; top:10vh;width: 80%;}
 }
 @keyframes changeBg
 {
@@ -119,12 +119,13 @@
     align-items: center;
     align-content: center;
     margin-left: 10%;
-    margin-top: 4%;
+    top:10vh;
+    /* margin-top: 4%; */
     /* position: relative; */
     /* top:10%; */
     background-color: #fff;
     display: flex;
-    position: relative;
+    position: absolute;
     
     /* animation: myfirst 1s linear 2s infinite; */
     /* animation: myfirst 2s linear 1s 1 forwards;
@@ -132,66 +133,72 @@
     z-index: 1
   }
   .floatview-bg{
+
     width: 0%;
     height:10vh;
-    /* border:1px solid #fff; */
-    /* border-radius: 30px; */
-    /* border:1px solid #eee; */
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     align-content: center;
     margin-left: 10%;
-    /* margin-top: 3%; */
+    max-width: 80%;
     position: absolute;
     top:10vh;
-    /* top:10%; */
-    background-color: rgb(16, 142, 233,0.1);
-    display: flex;
-    /* animation: changeBg 20s linear 0s 1; */
-    /* animation: myfirst 2s linear 1s 1 forwards;
-    z-index: 1; */
+    background-color: rgb(16, 142, 233,0.2);
+    display:  inline-block;
     z-index: 1
   }
+
   .floatview1{
     width: 80%;
     height:10vh;
-    border:1px solid #eee;
+    border:1px solid #eee!important;
     border-radius: 20px;
+    justify-content: center;
     /* justifyContent: center; */
     align-items: center;
     align-content: center;
     margin-left: 10%;
-    margin-top: 4%;
+    top:10vh;
+    /* margin-top: 4%; */
     /* position: relative; */
     /* top:10%; */
     background-color: #fff;
     display: flex;
-    animation: floatdown 1s linear 0s 1 forwards;
+    position: absolute;
+    
+    /* animation: myfirst 1s linear 2s infinite; */
+    /* animation: myfirst 2s linear 1s 1 forwards;
+    z-index: 1; */
     z-index: 1;
-    position: relative;
-    z-index: 1
+    animation: floatdown 1s linear 0s 1 forwards;
   }
   .floatview2{
     width: 80%;
     height:10vh;
-    border:1px solid #fff;
+    border:1px solid #eee!important;
     border-radius: 20px;
+    justify-content: center;
     /* justifyContent: center; */
     align-items: center;
     align-content: center;
     margin-left: 10%;
-    margin-top: 4%;
+    top:10vh;
+    /* margin-top: 4%; */
     /* position: relative; */
     /* top:10%; */
     background-color: #fff;
     display: flex;
+    position: absolute;
+    
+    /* animation: myfirst 1s linear 2s infinite; */
+    /* animation: myfirst 2s linear 1s 1 forwards;
+    z-index: 1; */
+    z-index: 1;
     animation: floatup 1s linear 0s 1 forwards;
     /* animation: changeBack 1s linear 0s infinite; */
     
-    z-index: 1;
-    position: relative;
   }
   .content{
     height: 78vh;
@@ -224,13 +231,13 @@
     padding: 5px;
   }
   .img{
-    background: url("../../lib/images/timg.jpg") ;
     background-repeat: no-repeat;
     /* width:auto;
     height:auto; */
     width:10vh;
     height:10vh;
     display: block;
+    background-size: 100% 100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 0;
@@ -332,11 +339,6 @@
   /* .my-accordion .pad .am-accordion-content-box {
     padding: 10px;
   } */
-  .my-accordion{
-     border-radius: 10px;
-     margin: 10px 0;
-     color: #fff;
-  }
   .pad{
     
     border-radius: 10px;
@@ -366,4 +368,42 @@
   }
   .panel-content{
     padding: 0 20px;
+  }
+  .my-accordion-img{
+    width: 4vh;
+    height: 4vh;
+    border-radius: 5px;
+    margin: 0.5vh;
+    background-size: 100% 100%;
+  }
+  .my-accordion{
+     /* border-radius: 10px; */
+     /* margin: 1px 0; */
+     color: #fff;
+     background-color: #108ee9;
+     width: 96%;
+     border: 1px solid #fff;
+     /* margin: 10px 5%; */
+     /* margin: 5px 0; */
+     height: 5vh;
+     display: flex;
+     margin: 0 2%;
+  }
+  .my-accordion-words{
+    width: 80%;
+    font-size: 12px;
+    padding:0 10px;
+    height: auto;
+    line-height:5vh;
+    text-overflow:ellipsis;
+    /* width:12em;  */
+    overflow:hidden;
+     white-space: nowrap;
+  }
+  .my-accordion-icon{
+    font-size: 16px;
+    width: 10%;
+    text-align: center;
+    line-height: 5vh;
+    
   }

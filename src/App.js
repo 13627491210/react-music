@@ -6,7 +6,8 @@ import Mine from './Components/Mine/Mine'
 import PlayList from './Components/PlayList/PlayList'
 import Play from './Components/Play/Play'
 import Login from './Components/Login/Login'
-import  { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import RealPlay from './Components/RealPlay/RealPlay'
+import  { BrowserRouter as Router, Route, Switch ,Redirect} from 'react-router-dom'
 class App extends Component {
   state = {
     playUrl:"",
@@ -47,16 +48,19 @@ class App extends Component {
 // {/* <frame src="/log/music.html"></frame> */}
 // {/* </frameset> */}
 <div className="soulHome">
+      
       <Router>
       <Switch>
-        <Route path="/Home" component={Home} />
         <Route exact path="/" component={Login} />
+        <Route path="/Home" component={Home} />
         <Route path="/Mine" component={Mine} />
-        <Route path="/PlayList" component={PlayList} />
+        <Route path="/Play" component={Play} />
+        <Route path="/PlayList" component={PlayList} changeplay={this.changeplay}/>
         <Route path="/Login" component={Login} />
       </Switch>
     </Router>
-    <Play showPlay={this.state.showPlay} changeplay={this.changeplay} ></Play>
+    <RealPlay></RealPlay>
+    {/* <Play   showPlay={this.state.showPlay} changeplay={this.changeplay} ></Play> */}
     </div>
     // </React.Fragment>
     )
