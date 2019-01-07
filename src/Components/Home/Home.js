@@ -28,6 +28,7 @@ import fetchJsonp from "fetch-jsonp";
 import http from "../../lib/api/http";
 import axios from "axios";
 import { getItem, setItem } from "../../lib/api/localCache";
+// import './Home.less'
 
 function renderTabBar(props) {
   return (
