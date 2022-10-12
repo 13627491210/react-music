@@ -51,7 +51,7 @@
     "react-dom": "^16.6.3",
     "react-imageloader": "^3.0.0",
     "react-load-image": "^0.1.6",
-    "react-native": "^0.57.8",
+    "react-native": "^0.70.2",
     "react-onscroll": "^1.0.4",
     "react-router-dom": "^4.3.1",
     "react-sticky": "^6.0.3",
